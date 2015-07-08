@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyWebApp</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<header>
+	
+</header>
+<body>
+	<div class="container">
+
+		<ul class = "nav nav-tabs">
+			<li> <%=link_to "Home", controller: "home", action: "index"%> </li>
+			<li> <%=link_to "SignUp", controller: "users", action: "new"%> </li>
+			<li> <%=link_to "Log in", controller: "home", action: "login"%> </li>
+		</ul>	
+	</div>
+	<div class = "container">
+	<%= yield %>
+	</div>
+</body>
+</html>
