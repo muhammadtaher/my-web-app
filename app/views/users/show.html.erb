@@ -1,27 +1,30 @@
 <p id="notice"><%= notice %></p>
 <p>
-<strong>Avatar:</strong>
-<%= image_tag(@user.avatar.url(:thumb) , height: '100', width: '100') %>
+	<div class="span6 pull-right" style="text-align:right">
+		<div class="container">
+			<%= image_tag(@user.avatar.url(:thumb) , height: '100', width: '100', :class => "img-thumbnail") %>
 
+		</div> 
+	</div>	
 </p>
 <p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
+	<strong>First name:</strong>
+	<%= @user.first_name %>
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @user.email %>
+	<strong>Last name:</strong>
+	<%= @user.last_name %>
 </p>
 
 <p>
-  <strong>Password:</strong>
-  <%= @user.password %>
+	<strong>Email:</strong>
+	<%= @user.email %>
+</p>
+
+<p>
+	<strong>Password:</strong>
+	<%= @user.password %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

@@ -15,3 +15,12 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+jQuery(document).ready(function($) {
+  $('.continue').click(function(){
+
+  var nextId = $(this).parents('.tab-pane').next().attr("id");
+  $('[href=#'+nextId+']').tab('show');
+  alert 'HHEE';
+
+});
+}); //document.ready
